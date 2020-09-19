@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<h2><strong>Từ Điển Việt-Anh</strong></h2>
+<input id="enterWord" placeholder="Từ muốn dịch" type="text">
+<input type="text" id="result">
+<input type="button" onclick="clickDictionary()" value="Translate">
+<script>
+    function clickDictionary() {
+        let vietnamese = ['chó', 'mèo', 'lợn', 'hổ', 'sư tử', 'voi'];
+        let English = ['Dog', 'Cat', 'Pig', 'Tiger', 'lion', 'Elephant'];
+        let str = document.getElementById('enterWord').value;
+        let index = vietnamese.indexOf(str);
+        if (index === -1) {
+            document.getElementById('result').value = " Không tìm thấy từ này"
+        } else
+            document.getElementById('result').value = English[index];
+    }
+</script>
+</body>
+</html>
